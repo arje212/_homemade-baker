@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="min-h-screen bg-zinc-100 flex flex-col items-center justify-center">
+  
+  <header class="w-full bg-green-500 p-4 flex justify-between items-center">
+    <div class="text-white font-bold text-xl">Home-made Baker</div>
+    <div class="text-white">Arje212</div>
+  </header>
+  
+  <div class="w-full p-4">
+    <input type="text" placeholder="Search anything" class="w-full p-2 rounded-lg border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+  </div>
+  
+  <div class="w-full p-4">
+    <img src="./asset/imge/home-made baker.png" alt="Banner" class="w-full rounded-lg shadow-lg">
+  </div>
+  
+  <div class="w-full p-4">
+    <div class="flex justify-between items-center mb-2">
+      <h2 class="text-lg font-bold">Top categories</h2>
+      <a href="#" class="text-green-500">See more</a>
+    </div>
+    <div class="flex space-x-4 overflow-x-auto">
+      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
+        <img src="./asset/imge/434700167_7265099826901815_129475247325673409_n.jpg" alt="Category 1">
+      </div>
+      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
+        <img src="./asset/imge/Peanut Torn.png" alt="Category 2">
+      </div>
+      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
+        <img src="https://placehold.co/50x50" alt="Category 3">
+      </div>
+      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
+        <img src="https://placehold.co/50x50" alt="Category 4">
+      </div>
+    </div>
+  </div>
+  
+  <div class="w-full p-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-lg font-bold">Featured product</h2>
+      <a href="#" class="text-green-500">See more</a>
+    </div>
+    <div class="flex space-x-4 overflow-x-auto">
+      <div class="w-48 bg-white rounded-lg shadow-lg p-4 hover:scale-105 transform transition">
+        <img src="./asset/imge/1713453443202.png" alt="Red bell pepper" class="w-full h-32 object-cover rounded-lg mb-2">
+        <div class="text-center">
+          <h3 class="text-lg font-bold">peanut torn</h3>
+          <p class="text-green-500">₱10.00</p>
+        </div>
+      </div>
+      <div class="w-48 bg-white rounded-lg shadow-lg p-4 hover:scale-105 transform transition">
+        <img src="./asset/imge/Anadama_bread_(1).jpg" alt="Pumpkin" class="w-full h-32 object-cover rounded-lg mb-2">
+        <div class="text-center">
+          <h3 class="text-lg font-bold">Bread</h3>
+          <p class="text-green-500">₱50.00</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!--categories modal-->
+
+  <div id="modal" class="fixed top-19 inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg p-4 w-11/12 md:w-1/2 max-h-full overflow-y-auto">
+      <button id="closeModal" class="text-right text-gray-500 mb-4">✖</button>
+      <p class="text-center text-lg font-semibold mb-4">Explore Our Categories</p>
+      <div class="flex items-center mb-4">
+        <input type="text" placeholder="Search" class="w-full p-2 border rounded-lg" />
+      </div>
+      <h2 class="text-lg font-semibold mb-4">Categories</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="veggies" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="drinks" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="veggies" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="drinks" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="veggies" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="drinks" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="veggies" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="drinks" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="veggies" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="drinks" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="veggies" />
+        </div>
+        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
+          <img src="https://placehold.co/100x100" alt="drinks" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Navigation Bar -->
+  <nav class="w-full bg-green-500 p-4 flex justify-around items-center fixed bottom-0">
+    <a href="#" class="text-white rounded-lg hover:text-zinc-300 transition">
+      <img src="./asset/imge/home.gif" alt="Home" width="24" height="24">
+    </a>
+    <a href="#" id="openModal" class="text-white rounded-lg hover:text-zinc-300 transition">
+      <img src="./asset/imge/list.gif" alt="Categories" width="24" height="24">
+    </a>
+    <a href="#" class="text-white rounded-lg hover:text-zinc-300 transition">
+      <img src="./asset/imge/shopping-cart.gif" alt="Cart" width="24" height="24">
+    </a>
+    <a href="#" class="text-white rounded-lg hover:text-zinc-300 transition">
+      <img src="./asset/imge/profile.gif" alt="Profile" width="24" height="24">
+    </a>
+  </nav>
+</div>
+<script>
+    // JavaScript to toggle modal visibility
+    document.getElementById('openModal').addEventListener('click', function() {
+      document.getElementById('modal').classList.remove('hidden');
+    });
+  
+    document.getElementById('closeModal').addEventListener('click', function() {
+      document.getElementById('modal').classList.add('hidden');
+    });
+  
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
