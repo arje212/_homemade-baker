@@ -1,155 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Home-made baker</title>
-</head>
-<body>
-    <div class="min-h-screen bg-zinc-100 flex flex-col items-center justify-center">
-  
-  <header class="w-full bg-green-500 p-4 flex justify-between items-center">
-    <div class="text-white font-bold text-xl">Home-made Baker</div>
-    <div class="text-white">Arje212</div>
-  </header>
-  
-  <div class="w-full p-4">
-    <input type="text" placeholder="Search anything" class="w-full p-2 rounded-lg border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+    <link rel="stylesheet" href="./asset/style/style.css">
+  </head>
+  <body>
+    <div class="bg-white dark:bg-zinc-800 rounded-3xl p-6 shadow-lg max-w-md mx-auto">
+  <div class="flex items-center justify-between mb-4">
+    <div class="text-sm text-zinc-500 dark:text-zinc-400">Home-made Baker</div>
+    <img src="./asset/imge/1713453557390.png" alt="Profile" class="rounded-full w-10 h-10">
   </div>
-  
-  <div class="w-full p-4">
-    <img src="./asset/imge/home-made baker.png" alt="Banner" class="w-full rounded-lg shadow-lg">
+  <div class="text-eater">
+    <!-- The text to be "eaten" -->
+    <h1 class="text-2xl font-bold text-zinc-900 dark:text-white mb-4" id="textToEat">What's Cooking Today?</h1>
   </div>
-  
-  <div class="w-full p-4">
-    <div class="flex justify-between items-center mb-2">
-      <h2 class="text-lg font-bold">Top categories</h2>
-      <a href="#" class="text-green-500">See more</a>
+  <div class="relative mb-6">
+    <input type="text" placeholder="Search here..." class="w-full p-4 rounded-full bg-zinc-100 dark:bg-zinc-700 text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+    <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 dark:text-zinc-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>
+  </div>
+  <div id="div1" class="curved-bg">
+  <div class="content flex items-center space-x-4">
+    <div class="relative">
+      <img src="./asset/imge/1713453443202.png" alt="Discount" class="w-16 h-16">
+      <div class="spark spark-1"></div>
+      <div class="spark spark-2"></div>
+      <div class="spark spark-3"></div>
+      <div class="spark spark-4"></div>
     </div>
-    <div class="flex space-x-4 overflow-x-auto">
-      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
-        <img src="./asset/imge/434700167_7265099826901815_129475247325673409_n.jpg" alt="Category 1">
-      </div>
-      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
-        <img src="./asset/imge/Peanut Torn.png" alt="Category 2">
-      </div>
-      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
-        <img src="https://placehold.co/50x50" alt="Category 3">
-      </div>
-      <div class="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center hover:scale-105 transform transition">
-        <img src="https://placehold.co/50x50" alt="Category 4">
-      </div>
+    <div>
+      <h2 class="text-lg font-bold">Big discount 10.10</h2>
+      <p class="text-sm">Claim your voucher now!</p>
     </div>
   </div>
-  
-  <div class="w-full p-4">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-lg font-bold">Featured product</h2>
-      <a href="#" class="text-green-500">See more</a>
-    </div>
-    <div class="flex space-x-4 overflow-x-auto">
-      <div class="w-48 bg-white rounded-lg shadow-lg p-4 hover:scale-105 transform transition">
-        <img src="./asset/imge/1713453443202.png" alt="Red bell pepper" class="w-full h-32 object-cover rounded-lg mb-2">
-        <div class="text-center">
-          <h3 class="text-lg font-bold">peanut torn</h3>
-          <p class="text-green-500">₱10.00</p>
-        </div>
-      </div>
-      <div class="w-48 bg-white rounded-lg shadow-lg p-4 hover:scale-105 transform transition">
-        <img src="./asset/imge/Anadama_bread_(1).jpg" alt="Pumpkin" class="w-full h-32 object-cover rounded-lg mb-2">
-        <div class="text-center">
-          <h3 class="text-lg font-bold">Bread</h3>
-          <p class="text-green-500">₱50.00</p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <!--categories modal-->
-
-  <div id="modal" class="fixed top-19 inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white rounded-lg shadow-lg p-4 w-11/12 md:w-1/2 max-h-full overflow-y-auto">
-      <button id="closeModal" class="text-right text-gray-500 mb-4">✖</button>
-      <p class="text-center text-lg font-semibold mb-4">Explore Our Categories</p>
-      <div class="flex items-center mb-4">
-        <input type="text" placeholder="Search" class="w-full p-2 border rounded-lg" />
-      </div>
-      <h2 class="text-lg font-semibold mb-4">Categories</h2>
-      <div class="grid grid-cols-2 gap-4">
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="veggies" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="drinks" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="veggies" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="drinks" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="veggies" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="drinks" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="veggies" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="drinks" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="veggies" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="drinks" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="veggies" />
-        </div>
-        <div class="bg-green-100 rounded-lg p-4 flex items-center justify-center">
-          <img src="https://placehold.co/100x100" alt="drinks" />
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Navigation Bar -->
-  <nav class="w-full bg-green-500 p-4 flex justify-around items-center fixed bottom-0">
-    <a href="#" class="text-white rounded-lg hover:text-zinc-300 transition">
-      <img src="./asset/imge/home.gif" alt="Home" width="24" height="24">
-    </a>
-    <a href="#" id="openModal" class="text-white rounded-lg hover:text-zinc-300 transition">
-      <img src="./asset/imge/list.gif" alt="Categories" width="24" height="24">
-    </a>
-    <a href="#" class="text-white rounded-lg hover:text-zinc-300 transition">
-      <img src="./asset/imge/shopping-cart.gif" alt="Cart" width="24" height="24">
-    </a>
-    <a href="#" class="text-white rounded-lg hover:text-zinc-300 transition">
-      <img src="./asset/imge/profile.gif" alt="Profile" width="24" height="24">
-    </a>
-  </nav>
 </div>
-<script>
-    // JavaScript to toggle modal visibility
-    document.getElementById('openModal').addEventListener('click', function() {
-      document.getElementById('modal').classList.remove('hidden');
-    });
-  
-    document.getElementById('closeModal').addEventListener('click', function() {
-      document.getElementById('modal').classList.add('hidden');
-    });
-  
-    // Close modal when clicking outside of it
-    window.addEventListener('click', function(event) {
-      const modal = document.getElementById('modal');
-      if (event.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-  </script>
-</body>
+
+<div id="div2" class="w-full p-4">
+  <img src="./asset/imge/home-made baker.png" alt="Banner" class="w-full rounded-2xl hover:shadow-lg transition-shadow duration-300">
+</div>
+  <h2 class="text-lg font-bold text-zinc-900 dark:text-white mb-4">Category</h2>
+  <div class="overflow-y-auto max-h-40">
+    <div class="flex space-x-4 mb-6">
+      <button class="bg-black text-white px-4 py-2 rounded-full">All</button>
+      <button class="bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-white px-4 py-2 rounded-full">Burger</button>
+      <button class="bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-white px-4 py-2 rounded-full">Hotdog</button>
+      <button class="bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-white px-4 py-2 rounded-full">Sushi</button>
+    </div>
+  </div>
+  <div class="text-lg font-bold text-zinc-900 dark:text-white mb-4">
+    <h2 class="text-lg font-bold">Featured product</h2>
+  </div>
+  <div class="w-full p-4">
+    <div class="slider">
+        <div class="slider">
+            <div class="slider-item slide-enter mb-4"> <!-- Add mb-4 class for spacing -->
+              <!-- Product 1 -->
+              <div class="max-w-xs mx-auto bg-purple-200 p-4 rounded-2xl shadow-lg relative">
+                <div class="relative">
+                  <img src="./asset/imge/1713453443202.png" alt="Hotdog" class="w-full rounded-lg" />
+                  <div class="absolute top-0 right-0 bg-black text-white text-xs rounded-full px-2 py-1 transform translate-x-1/2 -translate-y-1/2">20%</div>
+                </div>
+                <div class="mt-4">
+                  <h2 class="text-xl font-bold">Peanut turn</h2>
+                  <p class="text-zinc-600">topped with delicious toppings</p>
+                  <div class="flex items-center mt-2">
+                    <span class="text-2xl font-bold">₱10,00</span>
+                    <span class="text-zinc-400 line-through ml-2">₱20,00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-item mb-4"> <!-- Add mb-4 class for spacing -->
+              <!-- Product 2 -->
+              <div class="max-w-xs mx-auto bg-purple-200 p-4 rounded-2xl shadow-lg relative">
+                <div class="relative">
+                  <img src="./asset/imge/1713453573323.png" alt="Hotdog" class="w-full rounded-lg" />
+                  <div class="absolute top-0 right-0 bg-black text-white text-xs rounded-full px-2 py-1 transform translate-x-1/2 -translate-y-1/2">20%</div>
+                </div>
+                <div class="mt-4">
+                  <h2 class="text-xl font-bold">Spring roll</h2>
+                  <p class="text-zinc-600">topped with delicious toppings</p>
+                  <div class="flex items-center mt-2">
+                    <span class="text-2xl font-bold">₱10,00</span>
+                    <span class="text-zinc-400 line-through ml-2">₱20,00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-item mb-4"> <!-- Add mb-4 class for spacing -->
+                <!-- Product 2 -->
+                <div class="max-w-xs mx-auto bg-purple-200 p-4 rounded-2xl shadow-lg relative">
+                  <div class="relative">
+                    <img src="./asset/imge/1713453573323.png" alt="Hotdog" class="w-full rounded-lg" />
+                    <div class="absolute top-0 right-0 bg-black text-white text-xs rounded-full px-2 py-1 transform translate-x-1/2 -translate-y-1/2">20%</div>
+                  </div>
+                  <div class="mt-4">
+                    <h2 class="text-xl font-bold">Spring roll</h2>
+                    <p class="text-zinc-600">topped with delicious toppings</p>
+                    <div class="flex items-center mt-2">
+                      <span class="text-2xl font-bold">₱10,00</span>
+                      <span class="text-zinc-400 line-through ml-2">₱20,00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Add more slider items with mb-4 class for spacing -->
+          </div>
+    </div>
+    <div class="text-lg font-bold text-zinc-900 dark:text-white mb-4">
+      <h2 class="text-lg font-bold">Product</h2>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="product-card">
+          <img src="https://placehold.co/300x200" alt="Cappuccino">
+          <div class="product-card-content">
+            <h2 class="product-name text-2xl font-bold">Cappuccino</h2>
+            <p class="product-details">Minden Bakery</p>
+            <p class="product-price text-1xl font-bold">₱28 / Box (6 pieces)</p>
+          </div>
+        </div>
+        <!-- Add more product cards here -->
+        <div class="product-card">
+          <img src="https://placehold.co/300x200" alt="Cappuccino">
+          <div class="product-card-content">
+            <h2 class="product-name text-2xl font-bold">Cappuccino</h2>
+            <p class="product-details">Minden Bakery</p>
+            <p class="product-price text-1xl font-bold">₱28 / Box (6 pieces)</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://placehold.co/300x200" alt="Cappuccino">
+          <div class="product-card-content">
+            <h2 class="product-name text-2xl font-bold">Cappuccino</h2>
+            <p class="product-details">Minden Bakery</p>
+            <p class="product-price text-1xl font-bold">₱28 / Box (6 pieces)</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://placehold.co/300x200" alt="Cappuccino">
+          <div class="product-card-content">
+            <h2 class="product-name text-2xl font-bold">Cappuccino</h2>
+            <p class="product-details">Minden Bakery</p>
+            <p class="product-price text-1xl font-bold">₱28 / Box (6 pieces)</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://placehold.co/300x200" alt="Cappuccino">
+          <div class="product-card-content">
+            <h2 class="product-name text-2xl font-bold">Cappuccino</h2>
+            <p class="product-details">Minden Bakery</p>
+            <p class="product-price text-1xl font-bold">₱28 / Box (6 pieces)</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://placehold.co/300x200" alt="Cappuccino">
+          <div class="product-card-content">
+            <h2 class="product-name text-2xl font-bold">Cappuccino</h2>
+            <p class="product-details">Minden Bakery</p>
+            <p class="product-price text-1xl font-bold">₱28 / Box (6 pieces)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+          <div class="buttons-container">
+            <button class="button text-black-400 dark:text-zinc-500" onclick="changeColor(this)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 6h18M3 18h18" />
+              </svg>
+              <span class="block text-xs">Home</span>
+            </button>
+            <button class="button text-black-400 dark:text-zinc-500" onclick="changeColor(this)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              <span class="block text-xs">Orders</span>
+            </button>
+            <button class="button text-black-400 dark:text-zinc-500" onclick="changeColor(this)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
+              </svg>
+              <span class="block text-xs">Cart</span>
+            </button>
+            <button class="button text-black-400 dark:text-zinc-500" onclick="changeColor(this)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span class="block text-xs">Profile</span>
+            </button>
+          </div>
+          <script src="./asset/js/script.js"></script>
+  </body>
 </html>
