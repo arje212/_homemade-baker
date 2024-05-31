@@ -307,3 +307,72 @@
     opacity: 0; /* Initially hide the eaten text */
     transition: opacity 0.5s ease; /* Smooth transition for opacity */
   }
+
+  /** icon cart **/
+  .cart-icon {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s;
+    left: 190px;
+    top: 290px;
+    position: absolute;
+  }
+
+  .cart-icon:hover {
+    transform: scale(1.2);
+  }
+  .cart-icon1 {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .cart-icon1:hover {
+    transform: scale(1.2);
+  }
+  .flying-item {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fly-to-cart 0.5s ease-in-out forwards;
+    top: -50px; 
+  }
+  .flying-item i {
+    font-size: 16px;
+    color: black;
+  }
+
+  @keyframes fly-to-cart {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, 50px); /* Adjust as necessary */
+    }
+  }
+
+  @keyframes run-cart {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, 0); /* Adjust the distance and direction as needed */
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .run-cart {
+    animation: run-cart 0.5s ease-in-out forwards;
+  }
+  

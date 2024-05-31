@@ -121,3 +121,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the eating animation
     eatText(0);
   });
+
+  function addToCart(event) {
+    const cartIcon = event.target;
+    const flyingItem = document.createElement('div');
+    flyingItem.classList.add('flying-item');
+    flyingItem.innerHTML = '<i class="fas fa-box"></i>';
+    cartIcon.appendChild(flyingItem);
+
+    flyingItem.addEventListener('animationend', () => {
+      cartIcon.removeChild(flyingItem);
+      cartIcon.classList.add('run-cart'); // Add class to trigger the cart animation
+    });
+  }
+
+  /** popup */
+  const openModalButton = document.getElementById('openModalButton');
+  const closeModalButton = document.getElementById('closeModalButton');
+  const modal = document.getElementById('myModal');
+
+  openModalButton.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
+
+  closeModalButton.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
