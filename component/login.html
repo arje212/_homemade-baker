@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="max-w-sm mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Login:</h2>
+    <button class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <form>
+    <div class="mb-4">
+      <label class="block text-zinc-700 dark:text-zinc-300">
+        <span class="flex items-center">
+          <svg class="h-5 w-5 mr-2 text-zinc-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"></path>
+          </svg>
+          Your Username or Email
+        </span>
+        <input type="text" class="mt-1 block w-full px-3 py-2 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 rounded-md text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring focus:ring-yellow-500 focus:border-yellow-500" placeholder="Your Username or Email">
+      </label>
+    </div>
+    <div class="mb-4">
+      <label class="block text-zinc-700 dark:text-zinc-300">
+        <span class="flex items-center">
+          <svg class="h-5 w-5 mr-2 text-zinc-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.1.9-2 2-2s2 .9 2 2v1h-4v-1zM16 7a4 4 0 00-8 0v4H4v10h16V11h-4V7z"></path>
+          </svg>
+          Your Password
+        </span>
+        <input type="password" class="mt-1 block w-full px-3 py-2 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 rounded-md text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring focus:ring-yellow-500 focus:border-yellow-500" placeholder="Your Password">
+      </label>
+    </div>
+    <div class="mb-4 flex items-center">
+      <input type="checkbox" class="h-4 w-4 text-yellow-500 focus:ring-yellow-500 border-zinc-300 rounded">
+      <label class="ml-2 text-zinc-700 dark:text-zinc-300">Remember me</label>
+    </div>
+    <button type="submit" class="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">LOGIN</button>
+    <p class="mt-4 text-center text-zinc-600 dark:text-zinc-400">Don't have an account? <a href="#" class="text-green-500 hover:underline">Signup</a></p>
+    <div class="mt-4 border-t border-zinc-300 dark:border-zinc-600"></div>
+    <p class="mt-4 text-center text-zinc-600 dark:text-zinc-400">OR login using social media</p>
+    <div class="mt-4 flex justify-center space-x-4">
+      <a href="#" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+        <img aria-hidden="true" alt="facebook" src="https://placehold.co/24x24" />
+      </a>
+      <a href="#" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+        <img aria-hidden="true" alt="twitter" src="https://placehold.co/24x24" />
+      </a>
+      <a href="#" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+        <img aria-hidden="true" alt="google" src="https://placehold.co/24x24" />
+      </a>
+    </div>
+  </form>
+
+
+    <div class="max-w-md mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-6">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold text-zinc-900 dark:text-white">Signup:</h2>
+    <button class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <form class="space-y-4">
+    <div class="relative">
+      <input type="text" placeholder="Your Username" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-zinc-700 dark:text-white dark:border-zinc-600">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg class="w-5 h-5 text-zinc-400 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A6 6 0 1118 6a6 6 0 01-12 0"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="relative">
+      <input type="password" placeholder="Your Password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-zinc-700 dark:text-white dark:border-zinc-600">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg class="w-5 h-5 text-zinc-400 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11V7m0 4v4m0 0h-4m4 0h4"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="relative">
+      <input type="password" placeholder="Re-Password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-zinc-700 dark:text-white dark:border-zinc-600">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg class="w-5 h-5 text-zinc-400 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM12 11V7m0 4v4m0 0h-4m4 0h4"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="relative">
+      <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-zinc-700 dark:text-white dark:border-zinc-600">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg class="w-5 h-5 text-zinc-400 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zM16 12V8m0 4v4"></path>
+        </svg>
+      </div>
+    </div>
+    <p class="text-xs text-blue-500 dark:text-blue-400">🔵 we will send you a message to confirm your email!</p>
+    <button type="submit" class="w-full py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">SIGN UP</button>
+  </form>
+  <div class="mt-4 text-center text-zinc-500 dark:text-zinc-400">OR signup using social media</div>
+  <div class="flex justify-center space-x-4 mt-4">
+    <a href="#" class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
+      <img src="https://placehold.co/24x24" alt="Facebook">
+    </a>
+    <a href="#" class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
+      <img src="https://placehold.co/24x24" alt="Twitter">
+    </a>
+    <a href="#" class="text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
+      <img src="https://placehold.co/24x24" alt="Google">
+    </a>
+  </div>
+</div>
+</div>
+  </body>
+</html>

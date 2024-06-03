@@ -200,7 +200,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300vh;
+    height: 310vh;
   }
 
   .grid {
@@ -375,4 +375,97 @@
   .run-cart {
     animation: run-cart 0.5s ease-in-out forwards;
   }
-  
+   /** header **/
+.navbar {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    background-color: black;
+    position: absolute;
+    top: 40px;
+    left: 80px; /* Move to 60px from left */
+    border-radius: 10px;
+    width: 200px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start off-screen */
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease, left 0.5s ease; /* Smooth transition */
+}
+
+.menu li {
+    border-bottom: 1px solid #444;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Added border radius for menu items */
+}
+
+.menu li a:hover {
+    background-color: #444;
+}
+
+/* Media query for mobile view */
+
+/* Active class to show the menu */
+.menu.active {
+    max-height: 500px; /* Adjust according to the content height */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/** buy now **/
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 9999; /* above all other content */
+  display: none; /* initially hidden */
+}
+
+.custom-details-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000; /* above overlay */
+}
+
+.custom-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

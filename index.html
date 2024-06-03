@@ -9,6 +9,17 @@
   <body>
     <div class="bg-white dark:bg-zinc-800 rounded-3xl p-6 shadow-lg max-w-md mx-auto">
   <div class="flex items-center justify-between mb-4">
+      <div class="menu-toggle" id="menu-toggle">
+          &#9776; <!-- Menu icon -->
+      </div>
+      <ul class="menu absolute z-50" id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Store</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Plans</a></li>
+        <li><a href="#" id="account-link">Account</a></li>
+    </ul>
     <div class="text-sm text-zinc-500 font-bold dark:text-zinc-400">Home-made Baker</div>
     <img src="./asset/imge/1713453557390.png" alt="Profile" class="rounded-full w-10 h-10">
   </div>
@@ -16,6 +27,61 @@
     <!-- The text to be "eaten" -->
     <h1 class="text-2xl font-bold text-zinc-900 dark:text-white mb-4" id="textToEat">What's Cooking Today?</h1>
   </div>
+  <!--login form-->
+  <div id="login-form" class="max-w-sm mx-auto bg-white dark:bg-zinc-800 items-center rounded-lg absolute z-50 shadow-lg p-6 hidden">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Login:</h2>
+        <button id="close-login-form" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <!-- Login form content -->
+    <form>
+        <div class="mb-4">
+            <label class="block text-zinc-700 dark:text-zinc-300">
+                <span class="flex items-center">
+                    <svg class="h-5 w-5 mr-2 text-zinc-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"></path>
+                    </svg>
+                    Your Username or Email
+                </span>
+                <input type="text" class="mt-1 block w-full px-3 py-2 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 rounded-md text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring focus:ring-yellow-500 focus:border-yellow-500" placeholder="Your Username or Email">
+            </label>
+        </div>
+        <div class="mb-4">
+            <label class="block text-zinc-700 dark:text-zinc-300">
+                <span class="flex items-center">
+                    <svg class="h-5 w-5 mr-2 text-zinc-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.1.9-2 2-2s2 .9 2 2v1h-4v-1zM16 7a4 4 0 00-8 0v4H4v10h16V11h-4V7z"></path>
+                    </svg>
+                    Your Password
+                </span>
+                <input type="password" class="mt-1 block w-full px-3 py-2 bg-white dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 rounded-md text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring focus:ring-yellow-500 focus:border-yellow-500" placeholder="Your Password">
+            </label>
+        </div>
+        <div class="mb-4 flex items-center">
+            <input type="checkbox" class="h-4 w-4 text-yellow-500 focus:ring-yellow-500 border-zinc-300 rounded">
+            <label class="ml-2 text-zinc-700 dark:text-zinc-300">Remember me</label>
+        </div>
+        <button type="submit" class="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">LOGIN</button>
+        <p class="mt-4 text-center text-zinc-600 dark:text-zinc-400">Don't have an account? <a href="#" class="text-green-500 hover:underline">Signup</a></p>
+        <div class="mt-4 border-t border-zinc-300 dark:border-zinc-600"></div>
+        <p class="mt-4 text-center text-zinc-600 dark:text-zinc-400">OR login using social media</p>
+        <div class="mt-4 flex justify-center space-x-4">
+            <a href="#" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+                <img aria-hidden="true" alt="facebook" src="https://placehold.co/24x24" />
+            </a>
+            <a href="#" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+                <img aria-hidden="true" alt="twitter" src="https://placehold.co/24x24" />
+            </a>
+            <a href="#" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300">
+                <img aria-hidden="true" alt="google" src="https://placehold.co/24x24" />
+            </a>
+        </div>
+    </form>
+</div>
   <div class="relative mb-6">
     <input type="text" placeholder="Search here..." class="w-full p-4 rounded-full bg-zinc-100 dark:bg-zinc-700 text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
     <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 dark:text-zinc-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
@@ -166,68 +232,14 @@
                   </h2>
                   <div class="flex items-center mt-2">
                     <span class="text-zinc-500 dark:text-zinc-400 text-sm">10K+ Sold</span>
-                    <button class="ml-auto text-zinc-500 dark:text-zinc-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M5 15l7-7 7 7"
-                        />
-                      </svg>
-                    </button>
                   </div>
                 </div>
                 <div class="mt-4">
-                  <div class="flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6 text-green-500 dark:text-green-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 10h18M3 6h18M3 14h18M3 18h18"
-                      />
-                    </svg>
-                    <span class="ml-2 text-zinc-800 dark:text-zinc-200"
-                      >Guaranteed to get by 2 - 4 Jun, with shipping fee ₱0</span
-                    >
-                  </div>
                   <div class="text-zinc-500 dark:text-zinc-400 text-sm mt-1">
                     Get a ₱30 discount voucher if your order arrives late.
                   </div>
                 </div>
                 <div class="mt-4">
-                  <div class="flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6 text-red-500 dark:text-red-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span class="ml-2 text-zinc-800 dark:text-zinc-200"
-                      >Lowest Price Guaranteed • Free & Easy Returns</span
-                    >
-                  </div>
                 </div>
               </div>
               <div class="mt-4 flex justify-between items-center">
@@ -243,14 +255,48 @@
                   </svg>
                   Chat Now
                 </button>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center">
-                  <i class="fas fa-shopping-cart cart-icon1 px-4 py-2" onclick="addToCart(event)"></i>
-                </button>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-lg">Buy Now</button>
+                <button class="bg-red-500 text-white px-4 py-2 rounded-lg" id="buy-now-button">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
+        <div class="custom-overlay hidden bg-white fixed top-0 left-0 w-full h-full flex justify-center items-center z-50" id="custom-overlay">
+          <div class="custom-details-container overflow-auto max-w-lg p-4 w-full sm:w-auto h-full sm:h-auto">
+              <button class="custom-close-button absolute top-0 right-0 m-4 text-lg font-bold text-gray-500" onclick="hideCustomDetails()">X</button>
+              <div class="flex flex-col items-center">
+                  <img src="./asset/imge/Peanut Torn.png" alt="Product Image" class="w-full h-64 object-cover mb-4">
+              </div>
+              <div class="w-full mb-4">
+                  <p class="font-semibold mb-2">Size</p>
+                  <div class="flex flex-col space-y-2">
+                      <div class="flex items-center space-x-2">
+                          <img src="https://placehold.co/50x50" alt="Color Black" class="w-12 h-12 object-cover">
+                          <p>60-pieces</p>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                          <img src="https://placehold.co/50x50" alt="Color Coffee" class="w-12 h-12 object-cover">
+                          <p>30-pieces</p>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                          <img src="https://placehold.co/50x50" alt="Color Brown" class="w-12 h-12 object-cover">
+                          <p>10-pieces</p>
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="w-full mb-4">
+                  <p class="font-semibold mb-2">Quantity</p>
+                  <div class="flex items-center space-x-2">
+                      <button class="bg-zinc-200 text-zinc-600 px-2 py-1">-</button>
+                      <input type="text" value="1" class="w-12 text-center border border-zinc-300">
+                      <button class="bg-zinc-200 text-zinc-600 px-2 py-1">+</button>
+                  </div>
+              </div>
+      
+              <button class="bg-red-500 text-white w-full py-2 rounded">Buy Now</button>
+          </div>
+      </div>
+    
         <!-- Add more product cards here -->
         <div class="product-card">
           <img src="https://placehold.co/300x200" alt="Cappuccino">
@@ -299,7 +345,7 @@
         </div>
       </div>
     </div>
-    
+    <!--
           <div class="buttons-container">
             <button class="button text-black-400 dark:text-zinc-500" onclick="changeColor(this)">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
@@ -326,6 +372,7 @@
               <span class="block text-xs">Profile</span>
             </button>
           </div>
+          -->
           <script src="./asset/js/script.js"></script>
   </body>
 </html>

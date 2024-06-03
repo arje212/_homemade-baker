@@ -148,3 +148,45 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.classList.add('hidden');
   });
 
+  /** header  */
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+});
+
+// Add event listener to each menu item
+var menuItems = document.querySelectorAll('.menu a');
+menuItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+        var menu = document.getElementById('menu');
+        menu.classList.remove('active');
+    });
+});
+
+
+/** buy now */
+const buyNowButton = document.getElementById('buy-now-button');
+    const customOverlay = document.getElementById('custom-overlay');
+
+    buyNowButton.addEventListener('click', function () {
+        customOverlay.classList.remove('hidden');
+    });
+
+    function hideCustomDetails() {
+        customOverlay.classList.add('hidden');
+    }
+
+    /** login form */
+    const accountLink = document.getElementById('account-link');
+    const loginForm = document.getElementById('login-form');
+    const closeLoginFormButton = document.getElementById('close-login-form');
+
+    accountLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        loginForm.classList.remove('hidden');
+    });
+
+    closeLoginFormButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        loginForm.classList.add('hidden');
+    });
